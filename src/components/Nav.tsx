@@ -10,7 +10,8 @@ export default function Nav() {
     <nav className="flex gap-4">
       <Link
         href="/rooms"
-        className={`text-sm px-4 py-2 rounded transition-colors ${
+        className={`text-sm px-4 py-2 rounded transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500
+          ${
           segment === 'rooms'
             ? 'bg-slate-200 text-gray-900 font-bold'
             : 'text-gray-600 font-medium hover:text-gray-900'
@@ -20,7 +21,8 @@ export default function Nav() {
       </Link>
       <Link
         href="/create"
-        className={`text-sm px-4 py-2 rounded transition-colors ${
+        className={`text-sm px-4 py-2 rounded transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500
+          ${
           segment === 'create'
             ? 'bg-slate-200 text-gray-900 font-bold'
             : 'text-gray-600 font-medium hover:text-gray-900'

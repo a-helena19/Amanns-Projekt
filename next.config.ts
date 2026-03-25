@@ -3,17 +3,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "i.pravatar.cc",
-      },
-      {
-        protocol: "https",
-        hostname: "c.pxhere.com",
-      }
-    ],
+    remotePatterns: [{hostname: 'i.pravatar.cc'}, {hostname: 'c.pxhere.com'}]
   },
+  logging: {
+    fetches: {
+      fullUrl: true
+    }
+  }
 };
 
 export default nextConfig;

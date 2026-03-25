@@ -5,7 +5,7 @@ import RoomList from '@/src/components/RoomList';
 import Pagination from '@/src/components/Pagination';
 import PageInfo from '@/src/components/PageInfo';
 import SortSelect from '@/src/components/SortSelect';
-import { notFound, redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {title: 'Rooms'}; 

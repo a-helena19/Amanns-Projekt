@@ -7,7 +7,7 @@ type Props = {
 
 export default function RoomCard({ room }: Props) {
   return (
-    <Link href={`/rooms/${room.id}`} className="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+    <Link href={`/rooms/${room.id}`} className="block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500">
       <img src={room.heroUrl} alt={room.title} className="w-full h-48 object-cover" />
       <div className="p-4">
         <h2 className="font-semibold truncate">{room.title}</h2>

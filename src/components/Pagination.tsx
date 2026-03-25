@@ -10,7 +10,8 @@ export default function Pagination({ currentPage, totalPages, sort = 'createdAt'
   return (
     <div className="flex justify-center items-center gap-6 mt-8 text-gray-500">
       {currentPage > 1 ? (
-        <Link href={`/rooms?page=${currentPage - 1}&sort=${sort}`} className="hover:text-black transition">
+        <Link href={`/rooms?page=${currentPage - 1}&sort=${sort}`} 
+          className="hover:text-black transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded">
           ←
         </Link>
       ) : (
@@ -20,7 +21,8 @@ export default function Pagination({ currentPage, totalPages, sort = 'createdAt'
       <span className="text-sm">Page {currentPage} of {totalPages}</span>
 
       {currentPage < totalPages ? (
-        <Link href={`/rooms?page=${currentPage + 1}&sort=${sort}`} className="hover:text-black transition">
+        <Link href={`/rooms?page=${currentPage + 1}&sort=${sort}`} 
+          className="hover:text-black transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded">
           →
         </Link>
       ) : (
