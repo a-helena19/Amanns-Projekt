@@ -1,6 +1,7 @@
 'use server';
 
 import { redirect } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
 import { API_URL } from '@/src/config';
 import { RoomInput } from '@/src/types';
 
@@ -33,5 +34,6 @@ export async function createRoomAction(
     return { error: json?.message ?? 'Invalid data received. Please verify your input.' };
   }
 
+  revalidatePath('/rooms');
   redirect('/rooms');
 }

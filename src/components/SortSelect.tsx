@@ -32,7 +32,7 @@ export default function SortSelect() {
                 <Select.Select.Item
                   key={option.value}
                   value={option.value}
-                  className="px-4 py-2 text-lg cursor-pointer hover:bg-gray-100 text-gray-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+                  className="px-4 py-2 text-lg cursor-pointer hover:bg-gray-100 focus:bg-cyan-50 focus:outline-none focus:text-cyan-600"
                 >
                   <Select.Select.ItemText>{option.label}</Select.Select.ItemText>
                 </Select.Select.Item>
