@@ -4,6 +4,8 @@ import { API_URL } from '@/src/config';
 import './globals.css';
 import Nav from '@/src/components/Nav';
 import UserInfo from '@/src/components/UserInfo';
+import ScrollToTop from '@/src/components/ScrollToTop';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: { default: 'Arrrbnb', template: '%s | Arrrbnb' },
@@ -18,10 +20,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en">
       <body>
+        <ScrollToTop /> 
         <header className="bg-slate-100 border-b border-slate-200 sticky top-0 z-50">
           <div className="w-full px-4 py-4">
             <div className="max-w-5xl mx-auto flex justify-between items-center">
-              <h1 className="text-2xl font-bold text-gray-900">Arrrbnb</h1>
+              <Link href="/rooms" className="text-2xl font-bold text-gray-900">
+                Arrrbnb   
+              </Link>
               <Nav />
               <UserInfo user={user} />
             </div>
