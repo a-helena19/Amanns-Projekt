@@ -96,7 +96,7 @@ export default function CreateRoom() {
             <button
               type="submit"
               disabled={pending}
-              className="ml-auto bg-cyan-600 hover:bg-cyan-700 disabled:bg-gray-400 text-white font-semibold py-2 px-6 rounded transition-colors"
+              className="ml-auto bg-cyan-600 hover:bg-cyan-700 disabled:bg-gray-400 text-white font-semibold py-2 px-6 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500"
             >
               {pending ? 'Submitting...' : 'Submit'}
             </button>

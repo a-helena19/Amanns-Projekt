@@ -34,6 +34,6 @@ export async function createRoomAction(
     return { error: json?.message ?? 'Invalid data received. Please verify your input.' };
   }
 
-  revalidatePath('/rooms');
+  revalidatePath('/rooms'); // it works without this line as well but I left it here as a precaution
   redirect('/rooms');
 }

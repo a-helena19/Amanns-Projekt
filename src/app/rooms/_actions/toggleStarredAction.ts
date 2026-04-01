@@ -15,7 +15,6 @@ export async function toggleStarredAction(roomId: number): Promise<Room> {
   }
 
   revalidatePath('/rooms');
-  revalidatePath(`/rooms/${roomId}`);
 
   return res.json();
 }
